@@ -10,7 +10,16 @@ This is a RESTful API for an online bookstore, built with Spring Boot.
 
 This project uses the H2 in-memory database. No additional setup is required to use the database.
 
-To run the project, use the following command:
+## Running the Server
+
+You can run the server directly from IntelliJ IDEA by following these steps:
+
+1. Open the project in IntelliJ IDEA.
+2. Navigate to the `OnlineBookstoreApiApplication.java` file in the Project Explorer.
+3. Right-click on the file and select 'Run OnlineBookstoreApiApplication'.
+4. The server will start and listen for requests at `http://localhost:8081/api/books`.
+
+Alternatively, you can run the server from the command line:
 
 ```powershell
 ./mvnw spring-boot:run
@@ -88,3 +97,4 @@ Example usage:
 ```powershell
 $response = Invoke-WebRequest -Uri http://localhost:8081/api/books/1 -Method DELETE
 ```
+
