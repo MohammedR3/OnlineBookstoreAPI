@@ -17,7 +17,7 @@ You can run the server directly from IntelliJ IDEA by following these steps:
 1. Open the project in IntelliJ IDEA.
 2. Navigate to the `OnlineBookstoreApiApplication.java` file in the Project Explorer.
 3. Right-click on the file and select 'Run OnlineBookstoreApiApplication'.
-4. The server will start and listen for requests at `http://localhost:8081/api/books`.
+4. The server will start and listen for requests at `http://localhost:8080/api/books`.
 
 Alternatively, you can run the server from the command line:
 
@@ -35,10 +35,10 @@ Example usage:
 
 ```powershell
 # Get all books
-$response = Invoke-WebRequest -Uri http://localhost:8081/api/books
+$response = Invoke-WebRequest -Uri http://localhost:8080/api/books
 
 # Search for books with "Example" in the title
-$response = Invoke-WebRequest -Uri "http://localhost:8081/api/books?title=Example"
+$response = Invoke-WebRequest -Uri "http://localhost:8080/api/books?title=Example"
 
 ```
 
@@ -49,7 +49,7 @@ Retrieves a specific book by its ID.
 Example usage:
 
 ```powershell
-$response = Invoke-WebRequest -Uri http://localhost:8081/api/books/1
+$response = Invoke-WebRequest -Uri http://localhost:8080/api/books/1
 ```
 
 ### POST /api/books
@@ -67,7 +67,7 @@ $body = @{
     publicationYear = 2023
 } | ConvertTo-Json
 
-$response = Invoke-WebRequest -Uri http://localhost:8081/api/books -Method POST -Body $body -ContentType "application/json"
+$response = Invoke-WebRequest -Uri http://localhost:8080/api/books -Method POST -Body $body -ContentType "application/json"
 ```
 
 ### PUT /api/books/{id}
@@ -85,7 +85,7 @@ $body = @{
     publicationYear = 2023
 } | ConvertTo-Json
 
-$response = Invoke-WebRequest -Uri http://localhost:8081/api/books/1 -Method PUT -Body $body -ContentType "application/json"
+$response = Invoke-WebRequest -Uri http://localhost:8080/api/books/1 -Method PUT -Body $body -ContentType "application/json"
 ```
 
 ### DELETE /api/books/{id}
@@ -95,6 +95,6 @@ Deletes a book from the bookstore.
 Example usage:
 
 ```powershell
-$response = Invoke-WebRequest -Uri http://localhost:8081/api/books/1 -Method DELETE
+$response = Invoke-WebRequest -Uri http://localhost:8080/api/books/1 -Method DELETE
 ```
 
